@@ -5,20 +5,20 @@ Redshiftの分析用クラスタを管理するツール
 
 ## 初期設定
 ```
-$ bundle install
+$ make setup
 ```
 
-## 設定ファイルの作成
-リネーム
+## 設定値の入力
 ```
-$ mv .env.sample .env
-```
+$ cat .env
+　# AWS Credentials
+　AWS_REGION=''
+　AWS_ACCESS_KEY_ID=''
+　AWS_SECRET_ACCESS_KEY=''
 
-値の入力
-```
-AWS_REGION=''
-AWS_ACCESS_KEY_ID=''
-AWS_SECRET_ACCESS_KEY=''
-CLUSTEER_NAME='' # メインのクラスタ名
-ANALYSIS_CLUSTER_NAME='' # メインのクラスタのスナップショットから立ち上げたい分析用クラスタ名
+　# Redshift
+　CLUSTEER_NAME=''            # メインのクラスタ名
+　ANALYSIS_CLUSTER_NAME=''    # メインクラスタのスナップショットから立ち上げたい、分析用クラスタ名
+
+$ vim .env
 ```
